@@ -2,7 +2,7 @@ import SignUpForm from "@/components/signUpForm/SignUpForm";
 
 function SignUpPage() {
   return (
-    <div className="bg-silk h-screen flex flex-col items-center justify-center">
+    <div className="bg-silk min-h-screen flex flex-col items-center justify-center">
       <div className="font-semibold bg-sunset pt-5 px-3 pb-8 shadow-2xl rounded-t-2xl">
         <h1 className="text-center  text-xl text-almostBlack bg-silk rounded-2xl p-3">
           Sign Up

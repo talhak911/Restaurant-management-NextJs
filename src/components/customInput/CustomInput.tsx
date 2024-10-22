@@ -13,7 +13,7 @@ function CustomInput({
     <div className=" space-y-2">
       <h4 >{label}</h4>
       <input
-        className=" border-black border-[1px] rounded-lg px-2 placeholder:text-sm py-1 w-full"
+        className="text-sm md:text-base md:min-w-[250px] border-black border-[1px] rounded-lg px-2 placeholder:text-sm py-1 w-full"
         placeholder={placeHolder}
         type={type}
         value={value}

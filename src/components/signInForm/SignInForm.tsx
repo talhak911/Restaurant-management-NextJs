@@ -3,13 +3,13 @@
 import Link from "next/link";
 import CustomButton from "../customButton/CustomButton";
 import CustomInput from "../customInput/CustomInput";
-import useSignUpForm from "./useSignUpForm";
+import useSignInForm from "./useSignInForm";
 
-function SignUpForm() {
-  const { signUpFields } = useSignUpForm();
+function SignInForm() {
+  const { signInFields } = useSignInForm();
   return (
     <div className=" space-y-2">
-      {signUpFields.map((field, index) => (
+      {signInFields.map((field, index) => (
         <CustomInput
           key={index}
           name={field.label}
@@ -21,18 +21,26 @@ function SignUpForm() {
           additionalProps={field.additionalProps}
         />
       ))}
-      <div className="pt-2 flex gap-[6px]  justify-center text-xs   font-semibold">
-     <p className="text-darkGreen">Have an accout?</p>
+      <div className=" flex justify-self-end">
         <Link
-        className="text-orange font-mono font-extrabold border-b border-sunset hover:border-b hover:border-orange"
-        href={"/sign-in"}
+          className="text-xs justify-items-end  text-orange font-extrabold font-mono border-b border-sunset hover:border-b hover:border-orange"
+          href={"/forget-password"}
         >
-          Sign In
+          Forget Password?
         </Link>
       </div>
-      <div className="flex justify-center pt-3">
+      <div className="pt-2 flex gap-[6px]  justify-center text-xs   font-semibold">
+     <p className="text-darkGreen">Don't have an accout?</p>
+        <Link
+        className="text-orange font-mono font-extrabold border-b border-sunset hover:border-b hover:border-orange"
+          href={"/sign-up"}
+        >
+          Sign Up
+        </Link>
+      </div>
+      <div className="flex justify-center pt-4">
         <CustomButton
-          label="Sign Up"
+          label="Sign In"
           onClick={() => console.log("Submit clicked")}
           variant="primary"
         />
@@ -41,4 +49,4 @@ function SignUpForm() {
   );
 }
 
-export default SignUpForm;
+export default SignInForm;

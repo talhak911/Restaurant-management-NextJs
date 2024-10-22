@@ -33,6 +33,20 @@ export type SignUpFieldsParams = {
   dob: string;
   setDob: (value: string) => void;
 };
+export type SignInFieldsParams = {
+  email: string;
+  setEmail: (value: string) => void;
+  password: string;
+  setPassword: (value: string) => void;
+};
+export type forgetPasswordFieldsParams = {
+  otp:string;
+  setOtp:(value: string) => void;
+  password: string;
+  setPassword: (value: string) => void;
+  confirmPassword: string;
+  setConfirmPassword: (value: string) => void;
+};
 
 export type CustomButtonProps = {
   label: string; 
